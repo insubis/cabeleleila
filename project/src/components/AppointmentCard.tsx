@@ -11,10 +11,10 @@ interface AppointmentCardProps {
 
 const AppointmentCard: React.FC<AppointmentCardProps> = ({ appointment }) => {
   const { cancelAppointment } = useAppContext();
-  
+
   const service = services.find(s => s.id === appointment.serviceId);
   const stylist = stylists.find(s => s.id === appointment.stylistId);
-  
+
   if (!service || !stylist) return null;
 
   const formatDate = (dateString: string) => {
@@ -64,12 +64,12 @@ const AppointmentCard: React.FC<AppointmentCardProps> = ({ appointment }) => {
   const isPastAppointment = () => {
     const appointmentDate = new Date(appointment.date);
     const today = new Date();
-    
+
     return appointmentDate < today;
   };
 
   const handleCancel = () => {
-    if (window.confirm('Are you sure you want to cancel this appointment?')) {
+    if (window.confirm('Tem certeza de que deseja cancelar este compromisso?')) {
       cancelAppointment(appointment.id);
     }
   };
@@ -84,7 +84,7 @@ const AppointmentCard: React.FC<AppointmentCardProps> = ({ appointment }) => {
             {appointment.status.charAt(0).toUpperCase() + appointment.status.slice(1)}
           </span>
         </div>
-        
+
         <div className="space-y-3 mb-5">
           <div className="flex items-start space-x-3">
             <Calendar className="text-purple-600 mt-1 flex-shrink-0" size={18} />
@@ -92,7 +92,7 @@ const AppointmentCard: React.FC<AppointmentCardProps> = ({ appointment }) => {
               <p className="text-gray-700">{formatDate(appointment.date)}</p>
             </div>
           </div>
-          
+
           <div className="flex items-start space-x-3">
             <Clock className="text-purple-600 mt-1 flex-shrink-0" size={18} />
             <div>
@@ -100,7 +100,7 @@ const AppointmentCard: React.FC<AppointmentCardProps> = ({ appointment }) => {
               <p className="text-gray-500 text-sm">{service.duration} minutes</p>
             </div>
           </div>
-          
+
           <div className="flex items-start space-x-3">
             <User className="text-purple-600 mt-1 flex-shrink-0" size={18} />
             <div>
@@ -108,7 +108,7 @@ const AppointmentCard: React.FC<AppointmentCardProps> = ({ appointment }) => {
               <p className="text-gray-500 text-sm">{stylist.specialty}</p>
             </div>
           </div>
-          
+
           <div className="flex items-start space-x-3">
             <Scissors className="text-purple-600 mt-1 flex-shrink-0" size={18} />
             <div>
@@ -116,19 +116,19 @@ const AppointmentCard: React.FC<AppointmentCardProps> = ({ appointment }) => {
             </div>
           </div>
         </div>
-        
+
         {appointment.status !== 'cancelled' && appointment.status !== 'completed' && !isPastAppointment() && (
           <div className="flex space-x-3">
             <button
               onClick={handleCancel}
               className="flex-1 py-2 border border-red-500 text-red-500 rounded-md hover:bg-red-50 transition-colors"
             >
-              Cancel
+              Cancelar
             </button>
             <button
               className="flex-1 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
             >
-              Reschedule
+              Reprogramar
             </button>
           </div>
         )}

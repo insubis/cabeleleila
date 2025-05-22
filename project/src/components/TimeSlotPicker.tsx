@@ -40,13 +40,12 @@ const TimeSlotPicker: React.FC<TimeSlotPickerProps> = ({
               key={slot.id}
               onClick={() => slot.available && onTimeSelect(slot.time)}
               disabled={!slot.available}
-              className={`py-2 px-3 rounded-md text-sm font-medium transition-colors ${
-                selectedTime === slot.time
-                  ? 'bg-purple-600 text-white'
-                  : slot.available
+              className={`py-2 px-3 rounded-md text-sm font-medium transition-colors ${selectedTime === slot.time
+                ? 'bg-purple-600 text-white'
+                : slot.available
                   ? 'bg-white border border-gray-200 hover:border-purple-600 text-gray-700'
                   : 'bg-gray-100 text-gray-400 cursor-not-allowed'
-              }`}
+                }`}
             >
               {formatTime(slot.time)}
             </button>
@@ -66,14 +65,14 @@ const TimeSlotPicker: React.FC<TimeSlotPickerProps> = ({
 
   return (
     <div className="bg-white rounded-lg shadow-md p-4">
-      <h2 className="text-lg font-semibold mb-4">Available Time Slots</h2>
+      <h2 className="text-lg font-semibold mb-4">Horários disponíveis</h2>
       {renderTimeSlots(morningSlots, 'Morning')}
       {renderTimeSlots(afternoonSlots, 'Afternoon')}
       {renderTimeSlots(eveningSlots, 'Evening')}
-      
+
       {timeSlots.length === 0 && (
         <p className="text-center text-gray-500 py-4">
-          No available time slots for this date. Please select another date.
+          Não há horários disponíveis para esta data. Selecione outra data.
         </p>
       )}
     </div>

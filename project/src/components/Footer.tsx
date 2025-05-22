@@ -11,28 +11,28 @@ const Footer: React.FC = () => {
           <div className="col-span-1">
             <Link to="/" className="flex items-center space-x-2 text-white mb-4">
               <Scissors size={24} />
-              <span className="text-xl font-bold">BeautyBook</span>
+              <span className="text-xl font-bold">Cabeleleila</span>
             </Link>
             <p className="text-gray-400 mb-6">
-              Professional hair styling and beauty services. Book your appointment today and experience the difference.
+              Serviços profissionais de cabeleireiro e beleza. Agende hoje mesmo sua consulta e sinta a diferença.
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Twitter"
               >
@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className="col-span-1">
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">Links rápidos</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/" className="text-gray-400 hover:text-white transition-colors">
@@ -52,17 +52,17 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/services" className="text-gray-400 hover:text-white transition-colors">
-                  Services
+                  Serviços
                 </Link>
               </li>
               <li>
                 <Link to="/stylists" className="text-gray-400 hover:text-white transition-colors">
-                  Our Stylists
+                  Nossos estilistas
                 </Link>
               </li>
               <li>
                 <Link to="/booking" className="text-gray-400 hover:text-white transition-colors">
-                  Book Appointment
+                  Agendar consulta
                 </Link>
               </li>
               <li>
@@ -75,31 +75,31 @@ const Footer: React.FC = () => {
 
           {/* Services */}
           <div className="col-span-1">
-            <h3 className="text-lg font-semibold mb-4">Our Services</h3>
+            <h3 className="text-lg font-semibold mb-4">Nossos serviços</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/services#haircut" className="text-gray-400 hover:text-white transition-colors">
-                  Haircuts & Styling
+                  Cortes de cabelo e estilo
                 </Link>
               </li>
               <li>
                 <Link to="/services#color" className="text-gray-400 hover:text-white transition-colors">
-                  Hair Coloring
+                  Coloração de cabelo
                 </Link>
               </li>
               <li>
                 <Link to="/services#treatment" className="text-gray-400 hover:text-white transition-colors">
-                  Hair Treatments
+                  Tratamentos capilares
                 </Link>
               </li>
               <li>
                 <Link to="/services#styling" className="text-gray-400 hover:text-white transition-colors">
-                  Blowouts & Styling
+                  Explosões e estilo
                 </Link>
               </li>
               <li>
                 <Link to="/services#extensions" className="text-gray-400 hover:text-white transition-colors">
-                  Hair Extensions
+                  Extensões de cabelo
                 </Link>
               </li>
             </ul>
@@ -107,11 +107,11 @@ const Footer: React.FC = () => {
 
           {/* Contact */}
           <div className="col-span-1">
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <h3 className="text-lg font-semibold mb-4">Contate-nos</h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
                 <MapPin size={20} className="text-purple-400 mt-1 flex-shrink-0" />
-                <span className="text-gray-400">123 Beauty Street, Salon City, SC 12345</span>
+                <span className="text-gray-400">rua 123 Beauty, Salon City, SC 12345</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="text-purple-400 flex-shrink-0" />
@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500 text-sm">
-          <p>© {new Date().getFullYear()} BeautyBook. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} cabeleleila. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

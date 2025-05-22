@@ -8,30 +8,30 @@ const LoginPage: React.FC = () => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
-  
+
   const { login } = useAppContext();
   const navigate = useNavigate();
   const location = useLocation();
-  
+
   // Get redirect URL from location state
   const redirectTo = location.state?.redirectTo || '/';
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Simple validation
     if (!email || !password) {
-      setErrorMessage('Please enter both email and password');
+      setErrorMessage('Por favor insira e-mail e senha');
       return;
     }
-    
+
     // Demo authentication - in a real app, this would call an API
     if (email === 'user@example.com' && password === 'password') {
       login({
         id: 'user-1',
-        name: 'John Doe',
+        name: 'admin',
         email: 'user@example.com',
-        phone: '123-456-7890'
+        phone: '123'
       });
       navigate(redirectTo);
     } else {
@@ -45,18 +45,18 @@ const LoginPage: React.FC = () => {
         <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
           <div className="p-8">
             <div className="text-center mb-8">
-              <h1 className="text-2xl font-bold text-gray-800 mb-2">Welcome Back</h1>
+              <h1 className="text-2xl font-bold text-gray-800 mb-2">Bem vindo de volta</h1>
               <p className="text-gray-600">
-                Sign in to manage your appointments and book new services.
+                Faça login para gerenciar seus compromissos e reservar novos serviços.
               </p>
             </div>
-            
+
             {errorMessage && (
               <div className="mb-6 p-3 bg-red-50 text-red-700 rounded-md text-sm">
                 {errorMessage}
               </div>
             )}
-            
+
             <form onSubmit={handleSubmit}>
               <div className="mb-6">
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
@@ -74,14 +74,14 @@ const LoginPage: React.FC = () => {
                   />
                 </div>
               </div>
-              
+
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-1">
                   <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                    Password
+                    Senha
                   </label>
                   <a href="#" className="text-sm text-purple-600 hover:text-purple-700">
-                    Forgot password?
+                    Esqueceu a senha?
                   </a>
                 </div>
                 <div className="relative">
@@ -103,7 +103,7 @@ const LoginPage: React.FC = () => {
                   </button>
                 </div>
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
@@ -111,11 +111,11 @@ const LoginPage: React.FC = () => {
                 Sign In
               </button>
             </form>
-            
+
             <div className="mt-6 text-center">
               <p className="text-gray-600">
-                Don't have an account?{' '}
-                <button 
+                Não tem uma conta?{' '}
+                <button
                   onClick={() => navigate('/register', { state: { redirectTo } })}
                   className="text-purple-600 hover:text-purple-700 font-medium"
                 >
@@ -123,10 +123,10 @@ const LoginPage: React.FC = () => {
                 </button>
               </p>
             </div>
-            
+
             <div className="mt-8 pt-6 border-t border-gray-200">
               <p className="text-xs text-center text-gray-500">
-                For demo purposes, use: user@example.com / password
+                Para fins de demonstração, use: user@example.com/senha
               </p>
             </div>
           </div>

@@ -15,73 +15,73 @@ const HomePage: React.FC = () => {
   return (
     <div>
       <Hero />
-      
+
       {/* Featured Services */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Services</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Discover our range of professional hair services designed to enhance your natural beauty and leave you feeling refreshed.
+              Descubra nossa gama de serviços capilares profissionais projetados para realçar sua beleza natural e deixar você se sentindo revigorada.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredServices.map(service => (
               <ServiceCard key={service.id} service={service} />
             ))}
           </div>
-          
+
           <div className="text-center mt-10">
-            <button 
+            <button
               onClick={() => navigate('/services')}
               className="inline-flex items-center text-purple-600 font-medium hover:text-purple-700 transition-colors"
             >
-              View All Services
+              Ver todos os serviços
               <ArrowRight size={16} className="ml-1" />
             </button>
           </div>
         </div>
       </section>
-      
+
       {/* Why Choose Us */}
       <section className="py-16 bg-purple-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Why Choose Us</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Por que nos escolher</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              We're committed to providing you with the highest quality hair care and an exceptional salon experience.
+              Estamos comprometidos em oferecer a você cuidados capilares da mais alta qualidade e uma experiência excepcional no salão.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-6 shadow-md transform transition-transform hover:scale-[1.03]">
               <div className="bg-purple-100 w-14 h-14 rounded-full flex items-center justify-center mb-5">
                 <Scissors className="text-purple-600" size={24} />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Expert Stylists</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Estilista especialistas</h3>
               <p className="text-gray-600">
-                Our team of experienced professionals stays up-to-date with the latest trends and techniques.
+                Nossa equipe de profissionais experientes se mantém atualizada com as últimas tendências e técnicas.
               </p>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-start">
                   <Check size={16} className="text-green-500 mt-1 mr-2" />
-                  <span className="text-gray-700">Continuously trained</span>
+                  <span className="text-gray-700">Treinado continuamente</span>
                 </li>
                 <li className="flex items-start">
                   <Check size={16} className="text-green-500 mt-1 mr-2" />
-                  <span className="text-gray-700">Years of experience</span>
+                  <span className="text-gray-700">Anos de experiência</span>
                 </li>
               </ul>
             </div>
-            
+
             <div className="bg-white rounded-xl p-6 shadow-md transform transition-transform hover:scale-[1.03]">
               <div className="bg-purple-100 w-14 h-14 rounded-full flex items-center justify-center mb-5">
                 <Brush className="text-purple-600" size={24} />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Premium Products</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Produtos Premium</h3>
               <p className="text-gray-600">
-                We use only the highest quality products to ensure the best results for your hair.
+                Usamos apenas produtos da mais alta qualidade para garantir os melhores resultados para seu cabelo.
               </p>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-start">
@@ -90,72 +90,72 @@ const HomePage: React.FC = () => {
                 </li>
                 <li className="flex items-start">
                   <Check size={16} className="text-green-500 mt-1 mr-2" />
-                  <span className="text-gray-700">Environmentally friendly</span>
+                  <span className="text-gray-700">Ecologicamente correto</span>
                 </li>
               </ul>
             </div>
-            
+
             <div className="bg-white rounded-xl p-6 shadow-md transform transition-transform hover:scale-[1.03]">
               <div className="bg-purple-100 w-14 h-14 rounded-full flex items-center justify-center mb-5">
                 <Clock className="text-purple-600" size={24} />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Convenient Booking</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Reserva conveniente</h3>
               <p className="text-gray-600">
-                Our online booking system makes it easy to schedule appointments on your time.
+                Nosso sistema de reservas on-line facilita o agendamento de consultas no seu tempo.
               </p>
               <ul className="mt-4 space-y-2">
                 <li className="flex items-start">
                   <Check size={16} className="text-green-500 mt-1 mr-2" />
-                  <span className="text-gray-700">24/7 online booking</span>
+                  <span className="text-gray-700">Reserva online 24 horas por dia, 7 dias por semana</span>
                 </li>
                 <li className="flex items-start">
                   <Check size={16} className="text-green-500 mt-1 mr-2" />
-                  <span className="text-gray-700">Appointment reminders</span>
+                  <span className="text-gray-700">Lembretes de compromissos</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
-      
+
       {/* Featured Stylists */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Meet Our Stylists</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Conheça Nossos Estilistas</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our talented team of professionals is dedicated to providing you with exceptional service and results.
+              Nossa talentosa equipe de profissionais se dedica a lhe oferecer serviços e resultados excepcionais.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredStylists.map(stylist => (
               <StylistCard key={stylist.id} stylist={stylist} />
             ))}
           </div>
-          
+
           <div className="text-center mt-10">
-            <button 
+            <button
               onClick={() => navigate('/stylists')}
               className="inline-flex items-center text-purple-600 font-medium hover:text-purple-700 transition-colors"
             >
-              View All Stylists
+              Ver todos os estilistas
               <ArrowRight size={16} className="ml-1" />
             </button>
           </div>
         </div>
       </section>
-      
+
       {/* Testimonials */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">What Our Clients Say</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">O que nossos clientes dizem</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Don't just take our word for it. Here's what our satisfied clients have to say about their experiences.
+              Não acredite apenas na nossa palavra. Veja o que nossos clientes satisfeitos têm a dizer sobre suas experiências.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-6 shadow-md relative">
               <div className="absolute -top-4 left-6 text-purple-600">
@@ -168,24 +168,24 @@ const HomePage: React.FC = () => {
                   ))}
                 </div>
                 <p className="text-gray-600 mb-4">
-                  "The stylists here are amazing! I've been coming for years and have never been disappointed. My hair has never looked better!"
+                  "Os cabeleireiros aqui são incríveis! Venho há anos e nunca me decepcionei. Meu cabelo nunca esteve melhor!"
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 rounded-full overflow-hidden mr-3">
-                    <img 
-                      src="https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                      alt="Client" 
+                    <img
+                      src="https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="Client"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div>
                     <p className="font-medium text-gray-800">Emily Johnson</p>
-                    <p className="text-sm text-gray-500">Regular Client</p>
+                    <p className="text-sm text-gray-500">Cliente Regular</p>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-xl p-6 shadow-md relative">
               <div className="absolute -top-4 left-6 text-purple-600">
                 <MessageSquare size={32} className="fill-purple-100 stroke-purple-600" />
@@ -197,24 +197,24 @@ const HomePage: React.FC = () => {
                   ))}
                 </div>
                 <p className="text-gray-600 mb-4">
-                  "I had a balayage done here and it exceeded all my expectations. The color is perfect and the booking process was so easy!"
+                  "Fiz uma balayage aqui e superou todas as minhas expectativas. A cor ficou perfeita e o processo de reserva foi super fácil!"
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 rounded-full overflow-hidden mr-3">
-                    <img 
-                      src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                      alt="Client" 
+                    <img
+                      src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="Client"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div>
                     <p className="font-medium text-gray-800">Sarah Miller</p>
-                    <p className="text-sm text-gray-500">New Client</p>
+                    <p className="text-sm text-gray-500">Nova Cliente</p>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-xl p-6 shadow-md relative">
               <div className="absolute -top-4 left-6 text-purple-600">
                 <MessageSquare size={32} className="fill-purple-100 stroke-purple-600" />
@@ -226,19 +226,19 @@ const HomePage: React.FC = () => {
                   ))}
                 </div>
                 <p className="text-gray-600 mb-4">
-                  "The staff is professional and friendly, and the salon has a great atmosphere. I always look forward to my appointments here."
+                  "A equipe é profissional e simpática, e o salão tem um ambiente ótimo. Sempre aguardo ansiosamente meus horários aqui."
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 rounded-full overflow-hidden mr-3">
-                    <img 
-                      src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                      alt="Client" 
+                    <img
+                      src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                      alt="Client"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div>
                     <p className="font-medium text-gray-800">Michael Davis</p>
-                    <p className="text-sm text-gray-500">Loyal Client</p>
+                    <p className="text-sm text-gray-500">Cliente Fiel</p>
                   </div>
                 </div>
               </div>
@@ -246,19 +246,19 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       {/* CTA */}
       <section className="py-16 bg-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Look?</h2>
+          <h2 className="text-3xl font-bold mb-6">Pronto para transformar seu visual?</h2>
           <p className="text-lg text-purple-100 mb-8 max-w-2xl mx-auto">
-            Book your appointment today and experience the difference with our expert stylists and premium services.
+            Agende seu horário hoje mesmo e sinta a diferença com nossos estilistas especialistas e serviços premium.
           </p>
-          <button 
+          <button
             onClick={() => navigate('/booking')}
             className="px-8 py-3 bg-white text-purple-600 rounded-md hover:bg-gray-100 transition-colors font-medium text-lg"
           >
-            Book Your Appointment
+            Agende sua consulta
           </button>
         </div>
       </section>

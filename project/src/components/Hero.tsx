@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
   return (
     <div className="relative min-h-screen flex items-center bg-gradient-to-br from-purple-50 to-gray-100">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10 bg-repeat z-0" style={{ 
+      <div className="absolute inset-0 opacity-10 bg-repeat z-0" style={{
         backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%239C92AC\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
       }} />
 
@@ -16,41 +16,41 @@ const Hero: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-1/2 lg:pr-10 mb-10 lg:mb-0">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight">
-              <span className="block">Beauty starts with</span>
-              <span className="text-purple-600">perfect appointments</span>
+              <span className="block">A beleza começa com</span>
+              <span className="text-purple-600">compromissos perfeitos</span>
             </h1>
-            
+
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Book your next salon visit with ease. Professional stylists, premium services, and a seamless booking experience.
+              Agende sua próxima visita ao salão com facilidade. Estilistas profissionais, serviços premium e uma experiência de reserva perfeita.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
-              <button 
+              <button
                 onClick={() => navigate('/booking')}
                 className="px-8 py-3 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors flex items-center justify-center font-medium text-lg"
               >
                 <Calendar size={20} className="mr-2" />
                 Book Appointment
               </button>
-              
-              <button 
+
+              <button
                 onClick={() => navigate('/services')}
                 className="px-8 py-3 bg-white text-gray-800 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors font-medium text-lg"
               >
-                View Services
+                Ver serviços
               </button>
             </div>
           </div>
-          
+
           <div className="lg:w-1/2 relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
-              <img 
-                src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
-                alt="Hair Salon" 
+              <img
+                src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                alt="Hair Salon"
                 className="w-full h-auto object-cover"
               />
             </div>
-            
+
             {/* Floating badges */}
             <div className="absolute -top-10 -left-10 md:top-10 md:-left-16 bg-white rounded-lg shadow-md p-3 transform rotate-[-8deg] animate-float">
               <div className="flex items-center space-x-2">
@@ -61,12 +61,12 @@ const Hero: React.FC = () => {
                     </svg>
                   ))}
                 </div>
-                <span className="font-medium">Trusted by 1000+ clients</span>
+                <span className="font-medium">Aprovado por mais de 1.000 clientes</span>
               </div>
             </div>
-            
+
             <div className="absolute -bottom-6 -right-6 md:bottom-10 md:-right-10 bg-white rounded-lg shadow-md py-2 px-4 transform rotate-[5deg] animate-float-delayed">
-              <p className="font-medium text-gray-800">Premium Hair Services</p>
+              <p className="font-medium text-gray-800">Serviços capilares premium</p>
             </div>
           </div>
         </div>

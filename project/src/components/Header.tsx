@@ -23,45 +23,44 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
+        }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="flex items-center space-x-2 text-purple-600"
           >
             <Scissors size={24} />
-            <span className="text-xl font-bold">BeautyBook</span>
+            <span className="text-xl font-bold">Cabeleleila</span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
             >
               Home
             </Link>
-            <Link 
-              to="/services" 
+            <Link
+              to="/services"
               className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
             >
-              Services
+              Serviços
             </Link>
-            <Link 
-              to="/stylists" 
+            <Link
+              to="/stylists"
               className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
             >
-              Our Stylists
+              Nossos estilistas
             </Link>
-            <Link 
-              to="/booking" 
+            <Link
+              to="/booking"
               className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
             >
-              Book Now
+              Reserve agora
             </Link>
           </nav>
 
@@ -69,14 +68,14 @@ const Header: React.FC = () => {
           <div className="hidden md:flex items-center space-x-4">
             {isAuthenticated ? (
               <>
-                <Link 
-                  to="/appointments" 
+                <Link
+                  to="/appointments"
                   className="flex items-center space-x-1 text-gray-700 hover:text-purple-600 transition-colors"
                 >
                   <Calendar size={18} />
-                  <span>My Appointments</span>
+                  <span>Meus compromissos</span>
                 </Link>
-                <button 
+                <button
                   onClick={logout}
                   className="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition-colors"
                 >
@@ -85,14 +84,14 @@ const Header: React.FC = () => {
               </>
             ) : (
               <>
-                <Link 
-                  to="/login" 
+                <Link
+                  to="/login"
                   className="flex items-center px-4 py-2 text-gray-700 hover:text-purple-600 transition-colors"
                 >
                   Sign In
                 </Link>
-                <Link 
-                  to="/register" 
+                <Link
+                  to="/register"
                   className="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
                 >
                   Sign Up
@@ -121,50 +120,50 @@ const Header: React.FC = () => {
               <X size={24} />
             </button>
             <nav className="flex flex-col space-y-6">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className="flex items-center space-x-2 text-gray-700 hover:text-purple-600 transition-colors text-lg"
                 onClick={toggleMenu}
               >
                 <Home size={20} />
                 <span>Home</span>
               </Link>
-              <Link 
-                to="/services" 
+              <Link
+                to="/services"
                 className="flex items-center space-x-2 text-gray-700 hover:text-purple-600 transition-colors text-lg"
                 onClick={toggleMenu}
               >
                 <Scissors size={20} />
-                <span>Services</span>
+                <span>Serviços</span>
               </Link>
-              <Link 
-                to="/stylists" 
+              <Link
+                to="/stylists"
                 className="flex items-center space-x-2 text-gray-700 hover:text-purple-600 transition-colors text-lg"
                 onClick={toggleMenu}
               >
                 <User size={20} />
-                <span>Our Stylists</span>
+                <span>Nossos estilistas</span>
               </Link>
-              <Link 
-                to="/booking" 
+              <Link
+                to="/booking"
                 className="flex items-center space-x-2 text-gray-700 hover:text-purple-600 transition-colors text-lg"
                 onClick={toggleMenu}
               >
                 <Calendar size={20} />
-                <span>Book Now</span>
+                <span>Reserve agora</span>
               </Link>
-              
+
               <div className="pt-4 border-t border-gray-200">
                 {isAuthenticated ? (
                   <>
-                    <Link 
-                      to="/appointments" 
+                    <Link
+                      to="/appointments"
                       className="block py-3 text-gray-700 hover:text-purple-600 transition-colors text-lg"
                       onClick={toggleMenu}
                     >
-                      My Appointments
+                      Meus compromissos
                     </Link>
-                    <button 
+                    <button
                       onClick={() => {
                         logout();
                         toggleMenu();
@@ -176,15 +175,15 @@ const Header: React.FC = () => {
                   </>
                 ) : (
                   <>
-                    <Link 
-                      to="/login" 
+                    <Link
+                      to="/login"
                       className="block py-3 text-gray-700 hover:text-purple-600 transition-colors text-lg"
                       onClick={toggleMenu}
                     >
                       Sign In
                     </Link>
-                    <Link 
-                      to="/register" 
+                    <Link
+                      to="/register"
                       className="block w-full py-3 mt-4 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors text-lg text-center"
                       onClick={toggleMenu}
                     >

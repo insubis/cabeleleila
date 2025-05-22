@@ -11,28 +11,28 @@ const RegisterPage: React.FC = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
-  
+
   const { login } = useAppContext();
   const navigate = useNavigate();
   const location = useLocation();
-  
+
   // Get redirect URL from location state
   const redirectTo = location.state?.redirectTo || '/';
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Simple validation
     if (!name || !email || !phone || !password || !confirmPassword) {
-      setErrorMessage('Please fill in all fields');
+      setErrorMessage('Por favor preencha todos os campos');
       return;
     }
-    
+
     if (password !== confirmPassword) {
-      setErrorMessage('Passwords do not match');
+      setErrorMessage('As senhas não coincidem');
       return;
     }
-    
+
     // Demo registration - in a real app, this would call an API
     login({
       id: `user-${Date.now()}`,
@@ -40,7 +40,7 @@ const RegisterPage: React.FC = () => {
       email,
       phone
     });
-    
+
     navigate(redirectTo);
   };
 
@@ -50,18 +50,18 @@ const RegisterPage: React.FC = () => {
         <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
           <div className="p-8">
             <div className="text-center mb-8">
-              <h1 className="text-2xl font-bold text-gray-800 mb-2">Create an Account</h1>
+              <h1 className="text-2xl font-bold text-gray-800 mb-2">Crie uma conta</h1>
               <p className="text-gray-600">
-                Join BeautyBook to easily book and manage your salon appointments.
+                Junte-se ao cabeleleila para agendar e gerenciar facilmente seus compromissos no salão.
               </p>
             </div>
-            
+
             {errorMessage && (
               <div className="mb-6 p-3 bg-red-50 text-red-700 rounded-md text-sm">
                 {errorMessage}
               </div>
             )}
-            
+
             <form onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -79,7 +79,7 @@ const RegisterPage: React.FC = () => {
                   />
                 </div>
               </div>
-              
+
               <div className="mb-4">
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                   Email
@@ -96,7 +96,7 @@ const RegisterPage: React.FC = () => {
                   />
                 </div>
               </div>
-              
+
               <div className="mb-4">
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                   Phone Number
@@ -113,10 +113,10 @@ const RegisterPage: React.FC = () => {
                   />
                 </div>
               </div>
-              
+
               <div className="mb-4">
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
-                  Password
+                  Senha
                 </label>
                 <div className="relative">
                   <Lock size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
@@ -137,10 +137,10 @@ const RegisterPage: React.FC = () => {
                   </button>
                 </div>
               </div>
-              
+
               <div className="mb-6">
                 <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700 mb-1">
-                  Confirm Password
+                  Confirmar Senha
                 </label>
                 <div className="relative">
                   <Lock size={18} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
@@ -154,7 +154,7 @@ const RegisterPage: React.FC = () => {
                   />
                 </div>
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
@@ -162,11 +162,11 @@ const RegisterPage: React.FC = () => {
                 Sign Up
               </button>
             </form>
-            
+
             <div className="mt-6 text-center">
               <p className="text-gray-600">
-                Already have an account?{' '}
-                <button 
+                Já tem uma conta?{' '}
+                <button
                   onClick={() => navigate('/login', { state: { redirectTo } })}
                   className="text-purple-600 hover:text-purple-700 font-medium"
                 >
