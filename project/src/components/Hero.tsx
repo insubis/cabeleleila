@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
                 className="px-8 py-3 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors flex items-center justify-center font-medium text-lg"
               >
                 <Calendar size={20} className="mr-2" />
-                Book Appointment
+                Agendar consulta
               </button>
 
               <button
